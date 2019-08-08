@@ -28,7 +28,7 @@ target 'SixthMan' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+  pod 'Firebase/Core', '~> 6.3.0'
 
   target 'SixthManTests' do
     inherit! :search_paths
