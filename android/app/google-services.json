@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "596334349218",
+    "firebase_url": "https://sixth-man-8e49c.firebaseio.com",
+    "project_id": "sixth-man-8e49c",
+    "storage_bucket": "sixth-man-8e49c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596334349218:android:a461500f94cebbd0",
+        "android_client_info": {
+          "package_name": "com.sixthman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596334349218-hnqitg5prlg6sv8omr698ce3d30nbnuv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMzw-vnvXnAbGZGLHgS_5EHSgYM6MGI10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596334349218-hnqitg5prlg6sv8omr698ce3d30nbnuv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
