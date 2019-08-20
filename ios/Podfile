@@ -30,6 +30,8 @@ target 'SixthMan' do
 
   pod 'Firebase/Core', '~> 6.3.0'
 
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
   target 'SixthManTests' do
     inherit! :search_paths
     # Pods for testing
