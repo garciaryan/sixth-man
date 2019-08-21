@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import colors from '../../colors'
 
 const authStyles = StyleSheet.create({
   loginCard: {
@@ -18,7 +19,12 @@ const authStyles = StyleSheet.create({
   },
   bottomText: {
     fontSize: 16,
+    fontFamily: 'Lato-Light',
     textDecorationLine: 'underline'
+  },
+  button: {
+    backgroundColor: colors.$green,
+    color: '#fff'
   }
 });
 

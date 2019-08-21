@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import RouterComponent from './Router';
 import { applyMiddleware, createStore } from 'redux';
 import ReduxThunk from 'redux-thunk';
