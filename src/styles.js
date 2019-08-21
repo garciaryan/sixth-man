@@ -10,6 +10,11 @@ const gstyles = StyleSheet.create({
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10,
     paddingLeft: 7
+  },
+  errorTextStyle: {
+    fontSize: 20,
+    alignSelf: 'center',
+    color: 'red'
   }
 });
 

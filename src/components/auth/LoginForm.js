@@ -5,6 +5,7 @@ import { emailChanged, passwordChanged, loginUser } from '../../actions';
 import { Card, CardSection, Input, Button, Spinner } from '../common';
 import gstyles from '../../styles';
 import authStyles from './styles';
+import { Actions } from 'react-native-router-flux';
 
 class LoginForm extends Component {
   onEmailChange(text) {
@@ -60,7 +61,7 @@ class LoginForm extends Component {
               />
             </CardSection>
 
-            <Text style={styles.errorTextStyle}>
+            <Text style={gstyles.errorTextStyle}>
               {this.props.error}
             </Text>
 
@@ -69,22 +70,14 @@ class LoginForm extends Component {
             </CardSection>
           </Card>
           <View style={authStyles.bottomContainer}>
-            <Text style={authStyles.bottomText}>Forgot Password?</Text>
-            <Text style={authStyles.bottomText}>Create Account</Text>
+            <Text style={authStyles.bottomText} onPress={() => {}}>Forgot Password?</Text>
+            <Text style={authStyles.bottomText} onPress={() => Actions.register()}>Create Account</Text>
           </View>
         </View>
       </ImageBackground>
     );
   }
 }
-
-const styles = {
-  errorTextStyle: {
-    fontSize: 20,
-    alignSelf: 'center',
-    color: 'red'
-  }
-};
 
 const mapStateToProps = ({ auth }) => {
   const { email, password, error, loading } = auth;
