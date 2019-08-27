@@ -4,7 +4,7 @@ import colors from '../../colors'
 const authStyles = StyleSheet.create({
   loginCard: {
     justifyContent: 'center',
-    alignContent: 'center',
+		alignContent: 'center',
   },
   cardSections: {
     marginTop: 15,

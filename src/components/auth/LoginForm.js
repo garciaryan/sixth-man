@@ -29,7 +29,7 @@ class LoginForm extends Component {
 
     return (
       <Button onPress={this.onButtonPress.bind(this)} style={authStyles.button}>
-        <Text style={{ fontFamily: 'Lato-Light' }}>Login</Text>
+        <Text style={{ fontFamily: 'Lato-Bold' }}>Login</Text>
       </Button>
     );
   }

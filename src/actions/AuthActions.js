@@ -5,7 +5,10 @@ import {
   PASSWORD_CHANGED,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
-  LOGIN_USER
+	LOGIN_USER,
+	REGISTER_USER,
+	REGISTER_USER_FAIL,
+	REGISTER_USER_SUCCESS
 } from './types';
 
 export const emailChanged = (text) => {
@@ -38,6 +41,17 @@ export const loginUser = ({ email, password }) => {
   };
 };
 
+export const registerUser = ({ email, password }) => {
+	return (dispatch) => {
+		dispatch({ type: REGISTER_USER });
+		firebase.auth().createUserWithEmailAndPassword(email, password)
+			.then(() => {
+				registerUserSuccess(dispatch);
+			})
+			.catch(() => registerUserFail(dispatch))
+}
+}
+
 const loginUserFail = (dispatch) => {
   dispatch({ type: LOGIN_USER_FAIL });
 };
@@ -50,3 +64,17 @@ const loginUserSuccess = (dispatch, user) => {
 
   Actions.main();
 };
+
+const registerUserSuccess = (dispatch, user) => {
+	firebase.auth().onAuthStateChanged(user => {
+		dispatch({
+			type: REGISTER_USER_SUCCESS,
+			payload: user
+		});
+		Actions.main({ type: 'reset' });
+	})
+}
+
+const registerUserFail = (dispatch) => {
+	dispatch({ type: REGISTER_USER_FAIL });
+}
